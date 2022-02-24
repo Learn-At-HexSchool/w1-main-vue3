@@ -1,3 +1,4 @@
+# credit: https://github.com/hsiangfeng/vueDeploySH
 
 set -e
 
@@ -91,7 +92,7 @@ then
 echo
 echo ${osStatus} "${yellow}=============================================================="
 echo ${osStatus} " vue.config.js 不存在 "
-echo ${osStatus} " 將於五秒後建立 vue.config.js "
+echo ${osStatus} " 將於 5 秒後建立 vue.config.js "
 echo ${osStatus} " ＊如要停止動作請按下 CRTL + C or Control + C"
 echo ${osStatus} "==============================================================${norm}"
 
@@ -101,7 +102,7 @@ touch $work_path
 
 echo
 echo ${osStatus} "${lgreen}=============================================================="
-echo ${osStatus} " 五秒後開始寫入 Vue Cli 編譯後的路徑 "
+echo ${osStatus} " 5 秒後開始寫入 Vue Cli 編譯後的路徑 "
 echo ${osStatus} " publicPath 路徑是 「./」 "
 echo ${osStatus} " 詳細可見該檔案下註解。 "
 echo ${osStatus} " ＊如要停止動作請按下 CRTL + C or Control + C"
@@ -109,11 +110,12 @@ echo ${osStatus} "==============================================================
 
 sleep 5s
 
-echo "// 該檔案生成的方式可以在 Vue Ui 中的「設定」->「Vue Cli」->「公開路徑」找到。
+echo "// Vue-UI 的「設定」->「Vue-CLI」->「公開路徑」
+// vue.config.js file to be placed in the root of your repository
+// https://cli.vuejs.org/guide/deployment.html#github-pages
 module.exports = {
-  // 預設狀況下，部署到 GitHub Pages 可能會無法顯示畫面
-  // 因此需要多設置該屬性
-  // 官方文件：https://cli.vuejs.org/zh/config/#publicpath
+  // 預設狀況下，部署到 GitHub-Pages 可能會無法顯示畫面
+  // 因此需要更改路徑
   publicPath: './',
 };">$work_path
 
@@ -154,8 +156,9 @@ echo ${osStatus} " 初始化 Git 與加入 Commit "
 echo ${osStatus} "==============================================================${norm}"
 
 git init
-git add .
-git commit -m "update `date +'%Y-%m-%d %H:%M:%S'`";
+# git add .
+# git commit -m "update `date +'%Y-%m-%d %H:%M:%S'`";
+git commit -am "Update `date +'%Y-%m-%d %H:%M:%S'`";
 git branch -M $branchName
 
 echo
