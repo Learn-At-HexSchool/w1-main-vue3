@@ -1,0 +1,56 @@
+[
+    {
+        "type": "File",
+        "name": "d:\\WorkSpace\\GitHub\\w1-main-vue3\\package.json",
+        "parent_id": null,
+        "fsPath": "d:\\WorkSpace\\GitHub\\w1-main-vue3\\package.json",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "5f2jzxaFA8Gi41Sp"
+    },
+    {
+        "type": "File",
+        "name": "d:\\WorkSpace\\GitHub\\w1-main-vue3\\src\\main.js",
+        "parent_id": null,
+        "fsPath": "d:\\WorkSpace\\GitHub\\w1-main-vue3\\src\\main.js",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "O2F0WPrj9VtsDv3d"
+    },
+    {
+        "type": "File",
+        "name": "d:\\WorkSpace\\GitHub\\w1-main-vue3\\src\\App.vue",
+        "parent_id": null,
+        "fsPath": "d:\\WorkSpace\\GitHub\\w1-main-vue3\\src\\App.vue",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "Rx80fLXOQpTwk5uy"
+    },
+    {
+        "type": "Directory",
+        "name": "d:\\WorkSpace\\GitHub\\w1-main-vue3\\src\\views",
+        "parent_id": null,
+        "fsPath": "d:\\WorkSpace\\GitHub\\w1-main-vue3\\src\\views",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "AOUgaVHCyS2QFXvP"
+    },
+    {
+        "type": "Directory",
+        "name": "d:\\WorkSpace\\GitHub\\w1-main-vue3\\src\\router",
+        "parent_id": null,
+        "fsPath": "d:\\WorkSpace\\GitHub\\w1-main-vue3\\src\\router",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "dlUoZxjhfyg2F341"
+    },
+    {
+        "type": "Directory",
+        "name": "d:\\WorkSpace\\GitHub\\w1-main-vue3\\src\\components",
+        "parent_id": null,
+        "fsPath": "d:\\WorkSpace\\GitHub\\w1-main-vue3\\src\\components",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "IuDeANMqfzPsaREW"
+    }
+]
