@@ -1,0 +1,6 @@
+{
+  // for Vetur use
+  "vetur.ignoreProjectWarning": true
+
+  // "include": ["./src/**/*"]
+}
