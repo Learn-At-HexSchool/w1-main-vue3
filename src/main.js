@@ -1,6 +1,8 @@
 import { createApp } from "vue";
-// import bootstrap from "bootstrap";
 import 'bootstrap';
+// import bootstrap from "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 import App from "./App.vue";
 import router from "./router";
@@ -8,4 +10,7 @@ import router from "./router";
 const app = createApp(App);
 
 app.use(router);
+// app.use(bootstrap);
+// app.use(router).use(bootstrap);
+
 app.mount("#app");

@@ -6,7 +6,7 @@
       <a
         class="navbar-brand"
         href="#"
-      >Offcanvas navbar</a>
+      >首頁</a>
 
       <button
         class="navbar-toggler"
@@ -63,7 +63,7 @@
             <li class="nav-item">
               <router-link
                 class="nav-link"
-                to="/admin"
+                to="/admin/products"
               >
                 Admin
               </router-link>

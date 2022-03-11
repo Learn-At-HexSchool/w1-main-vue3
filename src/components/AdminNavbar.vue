@@ -4,7 +4,7 @@
       <a
         class="navbar-brand"
         href="#"
-      >Offcanvas navbar</a>
+      >主控台</a>
 
       <button
         class="navbar-toggler"
@@ -18,7 +18,7 @@
 
       <div
         id="offcanvasNavbar"
-        class="offcanvas offcanvas-end"
+        class="offcanvas offcanvas-end navbar-dark bg-dark"
         tabindex="-1"
         aria-labelledby="offcanvasNavbarLabel"
       >
@@ -27,7 +27,7 @@
             id="offcanvasNavbarLabel"
             class="offcanvas-title"
           >
-            Offcanvas
+            主控台
           </h5>
           <button
             type="button"
@@ -40,15 +40,6 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <!-- links -->
-            <li class="nav-item">
-              <router-link
-                class="nav-link"
-                to="/"
-              >
-                Home
-              </router-link>
-            </li>
-
             <li class="nav-item">
               <router-link
                 class="nav-link"
