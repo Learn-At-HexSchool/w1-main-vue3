@@ -7,9 +7,10 @@
     <h3>產品列表 _Products-List</h3>
 
     <section class="col table-responsive">
-      <table class="table table-hover align-middle mt-6">
+      <table class="table table-hover align-middle mt-6 table-dark">
         <!-- <caption>List of products</caption> -->
         <thead>
+          <!-- <thead class="thead-light"> -->
           <tr>
             <th>產品名稱</th>
             <th>原價</th>
@@ -42,7 +43,7 @@
               <div class="form-check form-switch">
                 <input
                   id="flexSwitchCheckChecked"
-                  v-model="item.is_enabled"                  
+                  v-model="item.is_enabled"
                   :true-value="1"
                   :false-value="0"
                   class="form-check-input"
@@ -103,13 +104,14 @@
         </tfoot>
       </table>
     </section>
-    <!-- end of col-list -->
+    <!-- end of col-list -->    
   </div>
 </template>
 
 <script>
 import data from "@/data.json";
 import ProductModal from "@/components/ProductModal.vue";
+import { apiLogCheck, apiGetProductList } from "../scripts/apis.js";
 
 export default {
   name: "ProductsList",
@@ -118,6 +120,11 @@ export default {
 
   data() {
     return {
+      isLogin: false,
+      isMask: true,
+      isShowStatus: false,
+      hintMsg: "驗證中",
+
       // products: [],
       products: data.products,
       itemInfo: {},
@@ -125,14 +132,63 @@ export default {
   },
 
   method: {
-    showInfo(item) {
-      this.itemInfo = item;
+    goHome() {
+      window.location = "index.html";
     },
-    /** end of showInfo() */
+    /** end of goHome() */
 
-    // getProducts() {
-    //   // this.products = data.products;
-    // },
+    showStatus() {
+      this.isMask = false;
+      this.isShowStatus = true;
+    },
+    /** end of showStatus() */
+
+    getProducts() {
+      // this.products = data.products;
+      // components: () => import("@/data.json"),
+      apiGetProductList()
+        .then((res) => {
+          // alert("2.1-then");
+          // console.dir(res);
+          const { products } = res.data;
+          // response.data.products
+          if (!this.products) {
+            this.isMask = true;
+          }
+          // statusText
+          // hintMsg = success
+          this.hintMsg = "Hi";
+          this.products = products;
+          this.showStatus();
+        })
+        .catch((err) => {
+          // alert("2.2-catch");
+          // console.dir(err);
+          const { data } = err.response;
+          this.hintMsg = data.message;
+        });
+    },
+
+    loginChecker() {
+      alert("1-loginChecker()");
+      // this.getProducts()
+      apiLogCheck()
+        .then((res) => {
+          alert("1.1-then");
+          const { success, message } = res.data;
+          this.hintMsg = message;
+          this.hintMsg = success;
+          this.isLogin = true;
+          this.getProducts();
+        })
+        .catch((err) => {
+          alert("1.2-catch");
+          // console.dir(err);
+          const { data } = err.response;
+          this.hintMsg = data.message;
+        });
+    },
+    /** end of loginChecker() */
   },
   /* end of method: */
 
@@ -142,6 +198,8 @@ export default {
   },
   /* end of mounted() */
 };
+
+
 </script>
 
 <style>

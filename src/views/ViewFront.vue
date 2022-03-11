@@ -1,7 +1,9 @@
 <template>
   <div class="front">
     <GuestNavbar />
-    <h1>View Front</h1>
+    <h1 class="text-warning">
+      View Front
+    </h1>
     <router-view />
   </div>
 </template>

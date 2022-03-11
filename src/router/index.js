@@ -13,6 +13,11 @@ const routes = [
         name: "Home",
         component: () => import("../views/PageHome.vue"),
       },
+      // {
+      //   path: "/demo",
+      //   name: "Demo",
+      //   component: () => import("../views/PageDemo.vue"),
+      // },
       {
         path: "/about",
         name: "About",
@@ -31,6 +36,12 @@ const routes = [
     component: () => import("../views/ViewConsole.vue"),
 
     children: [
+      {
+        // #Note: default path is null
+        path: "",
+        name: "Desk",
+        component: () => import("../views/AdminDesk.vue"),
+      },
       {
         // #NOTE: children path has no '/'
         path: "products",

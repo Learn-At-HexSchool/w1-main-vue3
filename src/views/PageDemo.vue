@@ -1,6 +1,8 @@
 <template>
-  <div class="products">
-    <h2>Products</h2>
+  <div class="demo">
+    <h2 class="text-warning">
+      Demo
+    </h2>
     <ProductsList />
   </div>
 </template>
